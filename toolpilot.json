@@ -1,0 +1,35 @@
+{
+    "$schema": "https://raw.githubusercontent.com/rnamburi/toolpilot/main/schema/toolpilot-config.schema.json",
+
+    "tools": {
+        "type": "script",
+        "command": "python",
+        "script": "./examples/python-tools.py",
+        "listArgs": ["--list-tools"],
+        "timeout": 180000
+    },
+
+    "agent": {
+        "systemPrompt": "You are an expert code analyst. Use the available tools to thoroughly investigate the codebase and answer the user's question. Always provide evidence from the actual code.",
+        "maxRounds": 12,
+        "model": {
+            "vendor": "copilot",
+            "family": ""
+        },
+        "outputFormat": {
+            "type": "object",
+            "required": ["summary", "findings", "recommendations"],
+            "description": "Respond with a JSON object containing: summary (string), findings (array of objects with file, issue, severity), recommendations (array of strings)."
+        }
+    },
+
+    "trigger": {
+        "type": "file",
+        "watchPattern": "input.json",
+        "outputFile": "output.json",
+        "debounceMs": 3000
+    },
+
+    "logFile": "toolpilot.log",
+    "logLevel": "normal"
+}
