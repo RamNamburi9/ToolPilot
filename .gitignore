@@ -1,0 +1,10 @@
+node_modules/
+vsce-temp/
+*.vsix
+toolpilot.log
+output.json
+input.json
+make_icon.py
+temp-pkg.json
+package-vsce.json
+Build-VSIX.ps1

@@ -1,0 +1,13 @@
+node_modules/
+vsce-temp/
+*.vsix
+*.py
+*.json
+!package.json
+toolpilot.log
+output.json
+input.json
+.vscode/
+temp-pkg.json
+package-vsce.json
+Build-VSIX.ps1

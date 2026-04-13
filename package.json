@@ -1,0 +1,74 @@
+{
+  "name": "toolpilot",
+  "displayName": "ToolPilot",
+  "description": "Run autonomous AI agent loops with any external tools — powered by your Copilot subscription. No API keys needed.",
+  "version": "1.0.0",
+  "publisher": "rnamburi",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "AI",
+    "Other"
+  ],
+  "keywords": [
+    "copilot",
+    "agent",
+    "autonomous",
+    "tool-calling",
+    "automation",
+    "ai-agent",
+    "mcp",
+    "language-model"
+  ],
+  "icon": "media/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rnamburi/toolpilot"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "toolpilot.run",
+        "title": "ToolPilot: Run Agent"
+      },
+      {
+        "command": "toolpilot.runWithInput",
+        "title": "ToolPilot: Run Agent with Input File"
+      },
+      {
+        "command": "toolpilot.showTools",
+        "title": "ToolPilot: Show Loaded Tools"
+      },
+      {
+        "command": "toolpilot.stop",
+        "title": "ToolPilot: Stop Agent"
+      }
+    ],
+    "configuration": {
+      "title": "ToolPilot",
+      "properties": {
+        "toolpilot.configFile": {
+          "type": "string",
+          "default": ".vscode/toolpilot.json",
+          "description": "Path to the ToolPilot configuration file (relative to workspace root)."
+        },
+        "toolpilot.logLevel": {
+          "type": "string",
+          "enum": ["minimal", "normal", "verbose"],
+          "default": "normal",
+          "description": "Logging verbosity in the ToolPilot output channel."
+        }
+      }
+    }
+  },
+  "extensionDependencies": [],
+  "extensionKind": [
+    "workspace"
+  ]
+}
