@@ -2,7 +2,7 @@
 
 **Run autonomous AI agent loops with any external tools — powered by your Copilot subscription.**
 
-No API keys. No paid credits. No vendor lock-in. Write tools in any language. Get structured JSON output.
+No external API keys required for tool execution. Uses existing GitHub Copilot access within VS Code. Write tools in any language. Get structured JSON output.
 
 ---
 
@@ -29,7 +29,7 @@ No human-in-the-loop. No chat window. Fully autonomous.
 
 | Feature | ToolPilot | Kilo Code | Copilot Chat | MCP Servers |
 |---------|-----------|-----------|--------------|-------------|
-| Uses Copilot subscription (free) | ✅ | ❌ ($$$) | ✅ | ✅ |
+| Uses Copilot subscription (no extra keys) | ✅ | ❌ (separate API key) | ✅ | ✅ |
 | Autonomous agent loop | ✅ | ✅ | ❌ (chat) | ❌ (chat) |
 | External tools (any language) | ✅ | ❌ | ❌ | ✅ |
 | File-based trigger/output | ✅ | ❌ | ❌ | ❌ |
@@ -209,7 +209,7 @@ node tools.js --tool query_db --args '{"sql": "SELECT count(*) FROM orders"}'
 ### Example Tool Scripts
 
 - **Python**: [examples/python-tools.py](./examples/python-tools.py) — File search, grep, code analysis, shell commands
-- More examples at [github.com/rnamburi/toolpilot/examples](https://github.com/rnamburi/toolpilot)
+- More examples at [github.com/rnamburi/toolpilot/examples](https://github.com/RamNamburi9/ToolPilot)
 
 ---
 
@@ -283,4 +283,4 @@ MIT
 
 ---
 
-**Built by an engineer who needed autonomous AI agents but didn't want to pay for API keys.**
+**Built by an engineer who wanted autonomous AI agents using existing Copilot access.**
