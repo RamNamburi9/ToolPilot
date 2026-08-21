@@ -1,7 +1,4 @@
 node_modules/
-toolpilot.log
-input.json
-output.json
 vsce-temp/
 *.vsix
 toolpilot.log
